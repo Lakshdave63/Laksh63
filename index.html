@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Laksh's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login Section -->
+  <div class="wrapper" id="login-section">
+    <form onsubmit="return validateLogin(event)">
+      <h2>Login</h2>
+      <div class="input-field">
+        <input type="text" id="email" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password" required>
+        <label>Enter your password</label>
+      </div>
+      <p id="error-message">Invalid Email or Password</p>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Remember me</p>
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit">Log In</button>
+    </form>
+  </div>
+
+  <!-- Portfolio Section (Hidden Initially) -->
+  <div id="portfolio-section">
+    <section>
+      <div class="card">
+        <h1>LAKSH DAVE</h1>
+        <p>Welcome to my portfolio! Below are my contact details, resume, and achievements.</p>
+
+        <div class="button-group">
+          <a href="https://www.instagram.com/lakshhh_63?igsh=dDYzcWtoZW0zbm9j">
+            <button><strong>Instagram Profile</strong></button>
+          </a>
+          <a href="https://i.ytimg.com/vi/t8hLu0xfgQA/hqdefault.jpg">
+            <button><strong>Click Here For Surprise</strong></button>
+          </a>
+          <button onclick="openPopup('resumePopup')">My Resume</button>
+          <button onclick="openPopup('achievementsPopup')">My Achievements</button>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Resume Popup -->
+  <div id="resumePopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('resumePopup')">&times;</span>
+      <h3>My Resume</h3>
+      <p>
+        <strong>Education:</strong><br>
+        <strong>Bachelor of Science in Computer Science</strong><br>
+        from <strong>Thakur College Of Science and Commerce (TCSC)</strong> (2024 - 2028)<br>
+        Junior College: <strong>TCSC</strong> (2022 - 2024)<br>
+        High School: <strong>St. Willibrord International School</strong> (2009 - 2022)<br>
+        <br>
+        <strong>Skills:</strong><br>
+        Figma, After Effects, Premiere Pro, Blender, JavaScript, Python, HTML, CSS, MySQL<br>
+        <br>
+        <strong>Experience:</strong><br>
+        Web Designer Intern (Pinterest, 2028 - 2031)<br>
+        Web Designer SDE1 at <strong>Amazon</strong> (2031 - Present)<br>
+      </p>
+    </div>
+  </div>
+
+  <!-- Achievements Popup -->
+  <div id="achievementsPopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('achievementsPopup')">&times;</span>
+      <h3>My Achievements</h3>
+      <ul>
+        <li>Winner of <strong>Hack It Out</strong> Hackathon (2024)</li>
+        <li>Certified in Data Structures & Algorithms from IIT Bombay</li>
+        <li>Built a full-fledged <strong>E-commerce Website</strong> using MERN stack</li>
+        <li>Top 5% on Freelance Platforms (Fiverr, Upwork)</li>
+        <li>Worked on <strong>AI-based Portfolio Generator</strong> using Python</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
