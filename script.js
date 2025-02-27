@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let password = document.getElementById("password").value;
 
     // Dummy authentication (replace with real authentication)
-    if (email === "tarangrajput17@gmail.com" && password === "tarangrajput@17") {
+    if (email === "davelaksh63@gmail.com" && password === "lakshdave63") {
       loginSection.style.display = "none";  // Hide login form
       portfolioSection.style.display = "block"; // Show portfolio
       setTimeout(() => portfolioSection.classList.add("show"), 100); // Smooth transition
